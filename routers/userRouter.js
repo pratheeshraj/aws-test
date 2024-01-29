@@ -5,4 +5,8 @@ const { Register } = require("../controllers/userContollers");
 
 const router=express.Router()
 
-router.post("/register",Register)
+router.get("/register",(req,res)=>{
+res.send("hello")
+})
+
+module.exports =router

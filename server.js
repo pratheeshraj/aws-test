@@ -2,7 +2,7 @@ const express = require("express")
 const dbConnection = require("./config/DbConnection")
 const dotenv = require("dotenv").config()
 const cors=require("cors")
-const userRouter=require("./routers/userRouter")
+const userRouter = require("./routers/userRouter.js")
 const app=express()
 
 //middlewares
@@ -13,8 +13,8 @@ const PORT=process.env.PORT
 // db Connection
 dbConnection()
 
-app.use((req,res)=>{
-res.send("hi iam pratheesh")
+app.get("/",(req,res)=>{
+    res.send("hi iam pratheesh")
 })
 app.listen(PORT,()=>{
     console.log(`server is connected on http://localhoast:${PORT}`);
